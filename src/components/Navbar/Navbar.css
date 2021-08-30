@@ -1,0 +1,195 @@
+* {
+  font-family: Poppins, sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 0 clamp(0.5rem, 0.5rem + 5vw, 5rem);
+
+  background-color: #242424;
+}
+
+.navbar-nav {
+  list-style: none;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-color: #242424;
+
+  transition: display 0.3s linear;
+}
+
+.nav-item {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 2rem;
+
+  font-size: 1.5rem;
+
+  background-color: #242424;
+
+  transition: filter 0.3s;
+}
+
+.nav-item:hover {
+  filter: brightness(1.4);
+}
+
+.nav-link {
+  height: 100%;
+
+  text-decoration: none;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  padding: 0.5rem;
+
+  color: #fff;
+}
+
+.dropdown {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 999;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  background-color: #242424;
+}
+
+.dropdown .nav-item {
+  width: 100%;
+
+  justify-content: center;
+
+  padding: 0.5rem 0;
+}
+
+.dropdown .nav-item:last-child {
+  padding-bottom: 1rem;
+}
+
+.navbar-buy {
+  display: flex;
+  align-items: center;
+
+  padding-left: 1rem;
+}
+
+.buy-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  margin: 0;
+
+  border-radius: 50%;
+
+  background-color: #484a4d;
+
+  transition: filter 0.3s;
+}
+
+.buy-wrap:hover {
+  filter: brightness(1.2);
+}
+
+.buy-icon {
+  color: #fff;
+}
+
+.ham-wrap {
+  height: 100%;
+  width: 100%;
+
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 0 0.5rem;
+
+  cursor: pointer;
+}
+
+.ham {
+  font-size: 1.5rem;
+
+  color: #fff;
+}
+
+@media screen and (max-width: 1120px) {
+  .ham-wrap {
+    width: 100%;
+
+    display: flex;
+  }
+
+  .navbar-nav {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+
+    height: fit-content;
+
+    flex-direction: column;
+
+    transition: all 0.3s linear;
+  }
+
+  .navbar-nav.active {
+    left: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+  }
+
+  .nav-item {
+    justify-content: center;
+
+    padding: 0.5rem 2rem;
+  }
+
+  .buy-wrap {
+    margin: 0.5rem 0 2rem;
+  }
+
+  .dropdown {
+    display: none;
+  }
+}

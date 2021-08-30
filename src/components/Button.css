@@ -1,0 +1,23 @@
+.btn-container {
+  max-height: fit-content;
+  max-width: fit-content;
+  height: 100%;
+
+  padding: 0.5rem 1rem;
+
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+
+  background-color: #fff;
+
+  cursor: pointer;
+
+  transition: all 0.2s linear;
+}
+
+.btn-container:hover {
+  color: #fff;
+  background-color: #000;
+}

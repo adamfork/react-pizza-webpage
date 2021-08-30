@@ -1,0 +1,38 @@
+.logo-container {
+  min-height: 70px;
+  height: fit-content;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.logo-icon {
+  padding: 0 0.5rem;
+
+  font-size: 2rem;
+
+  color: #ff9900;
+}
+
+.logo-text-left,
+.logo-text-right {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-text-left {
+  padding-left: 0.5rem;
+
+  color: #fff;
+}
+
+.logo-text-right {
+  padding-right: 0.5rem;
+
+  color: #ff9900;
+}

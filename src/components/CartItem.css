@@ -1,0 +1,164 @@
+/* ----------ITEM---------- */
+
+.cart-item-wrapper {
+  width: 60%;
+  height: fit-content;
+
+  display: grid;
+  grid-template-columns: auto repeat(5, 5rem);
+
+  margin: 0.5rem 0;
+}
+
+.cart-name {
+  text-transform: capitalize;
+}
+
+.cart-count,
+.cart-price,
+.cart-combined {
+  text-align: center;
+}
+
+.cart-btn-left {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-btn-right {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cart-item-btn {
+  width: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem;
+
+  border-radius: 50%;
+
+  outline: none;
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+
+  cursor: pointer;
+
+  transition: all 0.2s linear;
+}
+
+.cart-item-btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.cart-item-btn > i {
+  pointer-events: none;
+}
+
+/* ----------HEADER---------- */
+
+.cart-header-wrapper {
+  width: 60%;
+  height: fit-content;
+
+  display: grid;
+  grid-template-columns: auto repeat(5, 5rem);
+  grid-template-areas: 'name price ... count ... total';
+
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  border-bottom: 1px solid #bebebe;
+
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.cart-header-name {
+  grid-area: name;
+}
+
+.cart-header-count {
+  grid-area: count;
+}
+
+.cart-header-price {
+  grid-area: price;
+}
+
+.cart-header-combined {
+  grid-area: total;
+}
+
+.cart-header-count,
+.cart-header-price,
+.cart-header-combined {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cart-header-price-units,
+.cart-header-combined-units {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.cart-header-count-units {
+  text-transform: lowercase;
+  font-weight: normal;
+}
+
+/* ----------FOOTER---------- */
+
+.cart-footer-wrapper {
+  width: 60%;
+  height: fit-content;
+
+  display: grid;
+  grid-template-columns: auto repeat(5, 5rem);
+  grid-template-areas: '... ... ... ... ... total';
+
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+
+  border-top: 1px solid #bebebe;
+
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.cart-footer-total-price {
+  grid-area: total;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 100rem) {
+  .cart-item-wrapper,
+  .cart-header-wrapper,
+  .cart-footer-wrapper {
+    width: 75%;
+
+    grid-template-columns: auto repeat(5, 4rem);
+  }
+}
+
+@media screen and (max-width: 70rem) {
+  .cart-item-wrapper,
+  .cart-header-wrapper,
+  .cart-footer-wrapper {
+    width: 90%;
+
+    grid-template-columns: auto repeat(5, 3rem);
+  }
+}
